@@ -50,3 +50,5 @@ w.start()
 由于本人编程水平有限<br>
 如果各位朋友有更好的想法、更好的实现或是发现bug.欢迎提issue或者fork修改!<br>
 最后祝各位生活愉快!<br> ![Shurnim icon](https://github.com/QYLGitHub/SpiderMan/raw/master/SpiderMan/server/web/templates/static/images/readme/end.jpg)
+## Credits
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) project template.

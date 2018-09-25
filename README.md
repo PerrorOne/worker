@@ -35,15 +35,23 @@ python setup.py install
 #### 代码中使用
 ```python
 from worker.worker import Worker
-w = Worker()
-# 添加一个每过5秒运行一次的任务
-w.add_run_interval(lambda : None, interval_time=5)
-# 添加一个常驻任务，并同时运行10个此任务
-w.add_run_forever(lambda : None, run_num=10)
-# 添加一个当主进程结束时需要运行的任务
-w.add_kill_callback(lambda : None)
-# 启动框架
-w.start()
+
+def test_a():
+    print("a runing....")
+def test_b():
+    print("b runing....")
+def test_c():
+    print("c runing....")
+if __name__ == '__main__':
+    w = Worker()
+    # 添加一个每过5秒运行一次的任务
+    w.add_run_interval(test_a, interval_time=5)
+    # 添加一个常驻任务，并同时运行10个此任务
+    w.add_run_forever(test_b, run_num=10)
+    # 添加一个当主进程结束时需要运行的任务
+    w.add_kill_callback(test_c)
+    # 启动框架
+    w.start()
 ```
 
 #### 其他
